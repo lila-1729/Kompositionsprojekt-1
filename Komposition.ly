@@ -1,78 +1,98 @@
-\paper {
-  top-system-spacing.basic-distance = #10
-  score-system-spacing.basic-distance = #20
-  system-system-spacing.basic-distance = #20
-  last-bottom-spacing.basic-distance = #10
-}
-
-global = {
-  \key c \major
+global= {
   \time 4/4
+  \key d \minor
 }
 
-sopMusic = \relative {
-  c''4 c c8[( b)] c4
-}
-sopWords = \lyricmode {
-  hi hi hi hi
+
+\header {
+  title = "Ein Grab"
+  poet = "Wilhelm"
+  composer = "Jakob Hessel, Naoya, Efe"
+  tagline = "@ 2025"
 }
 
-altoMusic = \relative {
-  e'4 f d e
-}
-altoWords = \lyricmode {
-  ha ha ha ha
+
+melody = \relative c' {
+  \clef treble
+
+  \partial 4
+  r8 d8 d4 d8 d cis4 d bes bes a
+  r8 d8 d4 d4 cis4 d bes bes a
+
+  a' f g a a bes bes a 
+  a d, e f d gis gis a 
+
+  a d a a a f g a
+  bes c a a a f f e 
+
+  d fis a d c bes g a 
+  d, b' b a d, fis fis g
+
+  \bar "|."
+
 }
 
-tenorMusic = \relative {
-  g4 a f g
-}
-tenorWords = \lyricmode {
-  hu hu hu hu
+text = \lyricmode {
+  Es lie -- gen die Veil -- chen dun -- kel -- blau
+auf ei -- nem Grab im A -- bend -- tau,
+ein klei -- nes Mäd -- chen kniet da -- vor
+und hebt die Hän -- de fromm em -- por:
+"\"O" sagt, ihr Veil -- chen, in der Nacht
+ der Mut -- ter, was der Va -- ter macht, 
+ daß ich schon stri -- cken kann, und daß
+ Ich tau -- send -- mal sie grü -- ßen "laß\""
 }
 
-bassMusic = \relative {
-  c4 c g c
+upper = \relative c' {
+  \clef treble
+
+  \partial 4
+  r4
+
+  <d f a>2 <cis e a>4 <d f a>4
+  <bes d g>2  <d f a>4 r4
+
+  <d f a>2 <cis e a>4 <d f a>4
+  <bes d g>2  <d f a>4 r4
+
+  <d f a>1  <cis e g >2 <d f a>4 r4
+  <d f a>1  <d f aes>2 <d f a>4 r4
+
+  <d f a>1
+  <d f a>2. <c e g bes>4
+
+  <c f a>1
+
+  <d f a>2 <cis e a>4 r4
+
+  <d fis a>1
+  <bes d g>2 
+  <d f a>2
+
+    <bes d g>2 
+    <d f a>2
+    <d fis a>2
+    <b d g>4
+
 }
-bassWords = \lyricmode {
-  ho ho ho ho
+
+lower = \relative c {
+  \clef bass
+
+  \partial 4
 }
 
 \score {
-  \new ChoirStaff <<
-    \new Lyrics = "sopranos" \with {
-      % this is needed for lyrics above a staff
-      \override VerticalAxisGroup.staff-affinity = #DOWN
-    }
-    \new Staff = "women" <<
-      \new Voice = "sopranos" {
-        \voiceOne
-        << \global \sopMusic >>
-      }
-      \new Voice = "altos" {
-        \voiceTwo
-        << \global \altoMusic >>
-      }
+  <<
+    \new Voice = "mel" { \autoBeamOff \melody }
+    \new Lyrics \lyricsto mel \text
+    \new PianoStaff <<
+      \new Staff = "upper" \upper
+      \new Staff = "lower" \lower
     >>
-    \new Lyrics = "altos"
-    \new Lyrics = "tenors" \with {
-      % this is needed for lyrics above a staff
-      \override VerticalAxisGroup.staff-affinity = #DOWN
-    }
-    \new Staff = "men" <<
-      \clef bass
-      \new Voice = "tenors" {
-        \voiceOne
-        << \global \tenorMusic >>
-      }
-      \new Voice = "basses" {
-        \voiceTwo << \global \bassMusic >>
-      }
-    >>
-    \new Lyrics = "basses"
-    \context Lyrics = "sopranos" \lyricsto "sopranos" \sopWords
-    \context Lyrics = "altos" \lyricsto "altos" \altoWords
-    \context Lyrics = "tenors" \lyricsto "tenors" \tenorWords
-    \context Lyrics = "basses" \lyricsto "basses" \bassWords
   >>
+  \layout {
+    \context { \Staff \RemoveEmptyStaves }
+  }
+  \midi { }
 }
