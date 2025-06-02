@@ -1,9 +1,9 @@
 global= {
   \time 4/4
   \key d \minor
-  \version "2.24.4"
 }
 
+%\version "2.24.4"
 
 \header {
   title = "Ein Grab"
@@ -33,7 +33,7 @@ melody = \relative c' {
   r2 r4 a 
   d4. a8 a4 a 
   f g a bes
-  c2 a8 r8 bes4
+  c2 a4 bes4
   c4 a4 a a 
   f4. f8 e2
   
@@ -41,16 +41,18 @@ melody = \relative c' {
   fis a d c 
   bes g a d, 
   b' b a d, 
-  fis fis g2
+  fis fis g4 g
 
-  r2 r4 d4
-  
-  fis a d c 
-  bes g a d, 
-  b' b b b 
-  b b a d, 
-  fis2 fis2 
-  g1 
+  b d g f 
+  es2 r2
+  c4 r4 d4 r4
+
+  r4 d es es 
+  d2. d4 
+  c c bes2
+
+  r4 g fis fis 
+  g2 
 
   \repeat unfold 3 {r1} r2 r4 
 
@@ -124,67 +126,69 @@ upper = \relative c' {
 
   % Zwischenspiel
   << {\voiceTwo <g bes >2 } 
-  \new Voice {\voiceOne d'8 e f8. d16} >> a2
+  \new Voice {\voiceOne d'8 e f8. d16} >> \oneVoice a2
 
   d8 a d e f a, d a
-  e' a, e' f g a, cis a 
-  d8 a d e  gis d e f 
-  e a, cis a r2
+  e' a, e' f d a bes a 
+  d8 a d e b a b4( 
+  c) r4 r2
 
-  r1   
+  cis4. cis8 d2
 
   <d f a>4
   <d f a>8
-  <d f a>8
+  <d~ f a>8
   <d f a>2
 
   <d f a>4 
   <d f a>8
-  <d f a>8 
-  <d f a>4 
-  <c e g bes>4
+  <d~ f a>8 
+  <d~ f a>4 
+  <d e g bes>4
 
   <c f a>2. 
-  <c e g bes>4
+  bes'4
 
-  <c f a>4
-  <c f a>8
-  <c f a>8
-  <c f a>2
+  << {\voiceTwo <c, f a>4
+  <c f>8
+  <c~ f a>8
+  <c  a>2 } 
+  \new Voice {\voiceOne c'4 a8 f e2} >>
 
-  <d f a>4
-  <d f a>8
-  <d f a>8
-  <cis e a>2
 
-  r1 
+  r1 r1
+
+  <a, d fis a>8
+  <a d fis a>8
+  <a d fis a>8
+  <a d fis a>8
+  <a c fis a>8
+  <a c fis a>8
+  <a c fis a>8
+  <a c fis a>8
+
+  <bes d g bes>8
+  <bes d g bes>8
+  <bes d g bes>8
+  <bes d g bes>8
+  <a d f a>8
+  <a d f a>8
+  <a d f a>8
+  <a c f a>8
+
+  <bes d g bes>8
+  <bes d g bes>8
+  <bes d g bes>8
+  <bes d g bes>8
+  <a d f a>8
+  <a d f a>8
+  <a d f a>8
+  <a c f a>8
 
   <d fis a>8
   <d fis a>8
   <d fis a>8
   <d fis a>8
-  <bes d g>8
-  <bes d g>8
-  <bes d g>8
-  <bes d g>8
-
-  <d f a>8
-  <d f a>8
-  <d f a>8
-  <d f a>8
-  <bes d g>8 
-  <bes d g>8 
-  <bes d g>8 
-  <bes d g>8 
-
-  <d f a>8
-  <d f a>8
-  <d f a>8
-  <d f a>8
-  <d f a>8
-  <d f a>8
-  <d f a>8
-  <d f a>8
 
   <d fis a>4
   <d fis a>4
@@ -237,38 +241,66 @@ lower = \relative c, {
   <d  d' >2.^(_( <d a' d>4)
   <d  d' >2.^(_( <d a' d>4)
 
-  << {\voiceOne d8 a' d8 a8 } 
-  \new Voice {\voiceTwo d,4 d'4} >>
-  << {\voiceOne d,8 a' cis8 a8 } 
-  \new Voice {\voiceTwo d,4 cis'4} >>
+  << {\voiceTwo d8 a' d8 a8 } 
+  \new Voice {\voiceOne d,4 d'4} >>
+  << {\voiceTwo d,8 a' cis8 a8 } 
+  \new Voice {\voiceOne d,4 cis'4} >>
 
-  << {\voiceOne d,8 g bes8 g8 } 
-  \new Voice {\voiceTwo d4 bes'4} >>
-  << {\voiceOne d,8 f a8 f8 } 
-  \new Voice {\voiceTwo d4 a'4} >>
+  << {\voiceTwo d,8 g bes8 g8 } 
+  \new Voice {\voiceOne d4 bes'4} >>
+  << {\voiceTwo d,8 f a8 f8 } 
+  \new Voice {\voiceOne d4 a'4} >>
 
-  << {\voiceOne d,8 a' d8 a8 } 
-  \new Voice {\voiceTwo d,4 d'4} >>
-  << {\voiceOne d,8 a' cis8 a8 } 
-  \new Voice {\voiceTwo d,4 cis'4} >>
+  << {\voiceTwo d,8 a' d8 a8 } 
+  \new Voice {\voiceOne d,4 d'4} >>
+  << {\voiceTwo d,8 a' cis8 a8 } 
+  \new Voice {\voiceOne d,4 cis'4} >>
 
-  << {\voiceOne d,8 g bes8 g8 } 
-  \new Voice {\voiceTwo d4 bes'4} >>
-  << {\voiceOne d,8 f a8 f8 } 
-  \new Voice {\voiceTwo d4 a'4} >>
+  << {\voiceTwo d,8 g bes8 g8 } 
+  \new Voice {\voiceOne d4 bes'4} >>
+  << {\voiceTwo d,8 f a8 f8 } 
+  \new Voice {\voiceOne d4 a'4} >>
 
-  << {\voiceOne d,8 g bes8 g8 } 
-  \new Voice {\voiceTwo d4 bes'4} >>
-  << {\voiceOne d,8 f a8 f8 } 
-  \new Voice {\voiceTwo d4 a'4} >>
+  << {\voiceTwo d,8 g bes8 g8 } 
+  \new Voice {\voiceOne d4 bes'4} >>
+  << {\voiceTwo d,8 f a8 f8 } 
+  \new Voice {\voiceOne d4 a'4} >>
 
-  <d d'>4 a'8 d, <f a d>2
-  <d d'>4 a'8 cis <d, a' cis>2
-  <d d'>4 a'8 d, <e gis b>2
+  << {\voiceTwo d,1 } 
+  \new Voice {\voiceOne d4 a'8 d <d f>2} >>
+  	
+  << {\voiceTwo d,1 } 
+  \new Voice {\voiceOne d4 bes'8 e <d f>2} >>
 
-  r1 r1 
+  << {\voiceTwo d,1 } 
+  \new Voice {\voiceOne d4 a'8 d <e gis>2} >>
 
-  d8 a' d a d, cis'  a f d f b f d f a f 
+  a,8 e' a g f g e f  
+  a, e' a e <d f>2
+
+  << {\voiceTwo d,8 a' d8 a8 } 
+  \new Voice {\voiceOne d,4 d'4} >>
+  << {\voiceTwo d,8 a' d8 a8 } 
+  \new Voice {\voiceOne d,4 d'4} >>
+
+  << {\voiceTwo d,8 a' d8 a8 } 
+  \new Voice {\voiceOne d,4 d'4} >>
+  << {\voiceTwo d,8 a' c8 bes8 } 
+  \new Voice {\voiceOne d,4 c'4} >>
+
+  << {\voiceTwo f,8 c' f8 c8 } 
+  \new Voice {\voiceOne f,4 f'4} >>
+  f,2
+
+  << {\voiceTwo d8 a' d8 a8 } 
+  \new Voice {\voiceOne d,4 d'4} >>
+  << {\voiceTwo d,8 a' cis8 a8 } 
+  \new Voice {\voiceOne d,4 cis'4} >>
+
+  r1 r1
+
+  \repeat unfold 40 {<d, d'>8}
+
 }
 
 \score {
