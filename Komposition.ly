@@ -116,15 +116,24 @@ upper = \relative c' {
   <g bes e> 
   <f a d >2
 
-  <c' a'>4
-  <c f a>8 
-  <c f a>8 
-  <b f' gis>2
+  <d' f>4
+  <a d f>8 
+  <a d f> 
+  <g cis e>2
 
-  <bes g'>4 
-  <bes d g>8 
-  <bes d g> 
-  <a d f >2
+  <bes e>4 
+  <g bes e>8
+  <g bes e> 
+  <f a d >2
+  % <c' a'>4
+  % <c f a>8 
+  % <c f a>8 
+  % < eis gis >2
+
+  % <bes g'>4 
+  % <bes d g>8 
+  % <bes d g> 
+  % <a d f >2
 
 
 
