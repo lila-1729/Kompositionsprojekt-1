@@ -56,7 +56,8 @@ melody = \relative c' {
   g2
 
   r2 r1
-
+ 
+  r1
   \bar "|."
 
 }
@@ -149,15 +150,15 @@ upper = \relative c' {
 
   <a e' g>4. <cis e g>8 <d f>2
   
-  d8 a d e <a, e' gis>4. <b e gis>8
+  d8 a d e <gis, b e>4. <gis b e>8
 
   % e' a, e' f g a, cis a 
   % d8 a d e b a b4( 
   % c) r4 r2
   
-  <cis e a>2 r2 
+  <a cis e>2 r2 
 
-  <e a cis>4. <e a cis>8 <f a d>2 
+  <e' a cis>4. <e a cis>8 <f a d>2 
 
   << {\voiceTwo a,4 } 
   \new Voice {\voiceOne a'4 } >> \oneVoice
@@ -271,7 +272,13 @@ upper = \relative c' {
   <bes d g>4
   <bes d g>8
   <bes d g>8
-  <g bes d>1
+  <g bes d>4
+  <g bes d>8
+  <g bes d>
+  <d g bes>4
+  <d g bes>8
+  <d g bes>8
+  <bes d g>1
 
 }
 
@@ -399,7 +406,7 @@ lower = \relative c, {
   r2
   <d d'>2
 
-  g1~ <g, g'> 
+  g1 g, <g g'> 
 }
 
 \score {
