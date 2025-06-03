@@ -1,6 +1,5 @@
 global= {
   \time 4/4
-  \key d \minor
 }
 
 %\version "2.24.4"
@@ -15,6 +14,7 @@ global= {
 
 melody = \relative c' {
   \clef treble
+  \key d \minor
 
   \repeat unfold 3 {r1} 
 
@@ -39,10 +39,10 @@ melody = \relative c' {
   f4. f8 e2
   
   r2 r4 d4 
-  fis a d c 
-  bes g a d, 
-  b' b a d, 
-  fis fis g4\fermata b,
+  fis a d4.  c8 
+  bes4 g a r8 d, 
+  b'4 b a d, 
+  fis4. fis8 g4\fermata b,
 
   b d g f 
   es2 r2
@@ -73,17 +73,18 @@ text = \lyricmode {
   der Mut -- ter, was der Va -- ter macht, 
  
   daß ich schon stri -- cken kann, und daß
-  Ich tau -- send -- mal sie grü -- ßen laß.
+  ich tau -- send -- mal sie grü -- ßen laß;
  
   %ja, 
   daß ich schon stri -- cken kann, und daß
-  Ich tau -- send, tau -- send, tau -- send  -- mal 
+  ich tau -- send, tau -- send, tau -- send  -- mal 
   sie grü -- ßen "laß\""
 }
 
 upper = \relative c' {
   \clef treble
 
+  \key d \minor
 
   <a d f>4
   <a d f>8 
@@ -265,6 +266,7 @@ upper = \relative c' {
 lower = \relative c, {
   \clef bass
 
+  \key d \minor
  % << {\voiceOne d1}
  %   \new Voice {\voiceTwo
  %     d'2. a4
