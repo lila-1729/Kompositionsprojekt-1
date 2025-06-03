@@ -42,9 +42,9 @@ melody = \relative c' {
   fis a d4.  c8 
   bes4 g a r8 d, 
   bes'4 bes a d, 
-  fis4. fis8 g4\fermata b,
+  fis4. fis8 g4\fermata r8 b,8
 
-  b d g f 
+  b4 d g f 
   es2 r2
   c4 r4 d4 r4
 
@@ -181,7 +181,7 @@ upper = \relative c' {
   <d f>8 
   <cis~ e>2
 
-  <a d fis a>8
+  <a, d fis a>8
   <a d fis a>8
   <a d fis a>8
   <a d fis a>8
