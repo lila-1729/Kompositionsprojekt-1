@@ -389,6 +389,7 @@ lower = \relative c, {
 }
 
 \score {
+  \transpose d f{
   <<
     \new Voice = "mel" { \autoBeamOff \melody }
     \new Lyrics \lyricsto mel \text
@@ -396,7 +397,7 @@ lower = \relative c, {
       \new Staff = "upper" \upper
       \new Staff = "lower" \lower
     >>
-  >>
+  >>}
   \layout {
     \context { \Staff \RemoveEmptyStaves }
   }
