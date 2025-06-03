@@ -42,7 +42,7 @@ melody = \relative c' {
   fis a d4.  c8 
   bes4 g a r8 d, 
   bes'4 bes a d, 
-  fis4. fis8 g4\fermata r8 b,8
+  fis4. fis8 g4 r8 b,8
 
   b4 d g f 
   es2 r2
@@ -106,22 +106,22 @@ upper = \relative c' {
   <a~ d f>8 
   <a cis e>2
 
-  <d f>4
+  <a d f>4
   <a d f>8 
   <a d f> 
   <g cis e>2
 
-  <bes e>4 
+  <g bes e>4 
   <g bes e>8
   <g bes e> 
   <f a d >2
 
-  <d' f>4
+  <a d f>4
   <a d f>8 
   <a d f> 
   <g cis e>2
 
-  <bes e>4 
+  <g bes e>4 
   <g bes e>8
   <g bes e> 
   <f a d >2
@@ -183,7 +183,7 @@ upper = \relative c' {
   <a d f>4
   <d f>8 
   <d f>8 
-  <g, cis~ e>2
+  <a cis~ e>2
   
   <a' f'>4
   <d f>8 
@@ -222,7 +222,7 @@ upper = \relative c' {
   <a d fis a>8
   <a d fis a>8
 
-  <bes d g>4\fermata
+  <bes d g>4
 
   <b d g>4
 
@@ -250,9 +250,9 @@ upper = \relative c' {
 
   << {\voiceTwo c2 } 
   \new Voice {\voiceOne 
-  <es g bes>8
-  <es g bes>4
-  <es g bes>8
+  <es g>8
+  <es g>4
+  <es g>8
  } >> \oneVoice
   <bes d g~>2
   <bes d g>2
