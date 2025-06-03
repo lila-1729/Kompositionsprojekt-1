@@ -174,9 +174,12 @@ upper = \relative c' {
   <a d f>4
   <d f>8 
   <d f>8 
-  <g, cis~ e>2^(
+  <g, cis~ e>2
   
-  <cis e>) r2
+  <a' f'>4
+  <d f>8 
+  <d f>8 
+  <cis~ e>2
 
   <a d fis a>8
   <a d fis a>8
