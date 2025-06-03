@@ -41,7 +41,7 @@ melody = \relative c' {
   r2 r4 d4 
   fis a d4.  c8 
   bes4 g a r8 d, 
-  b'4 b a d, 
+  bes'4 bes a d, 
   fis4. fis8 g4\fermata b,
 
   b d g f 
